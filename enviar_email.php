@@ -2,7 +2,7 @@
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Define o endereço de e-mail do destinatário
-    $destinatario = "gustavo_raniele@hotmail.com";
+    $destinatario = "contato@cvssegurancacontraincendio.com.br";
 
     // Obtém os dados do formulário
     $remetente = $_POST["email"];
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Envia o e-mail
     if (mail($destinatario, $assunto, $corpo_email, $headers)) {
-        header("Location: formulario.html");
+        header("Location: index.html");
         exit;
     } else {
         echo "Erro ao enviar o e-mail.";
